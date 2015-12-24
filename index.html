@@ -71,6 +71,8 @@ p.ex1 {
     margin-top: 0%;
     margin-bottom: 1%;
     font-size: 120%;
+    padding-left: 5% ;
+    padding-right: 5%; 
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
 }
 img {
@@ -79,12 +81,12 @@ img {
 
 #cont {
     margin-right: 12%;
-    margin-left: 17%;
+    margin-left: 21%;
     right: 0px;
 }
 #navbar {
     position: absolute;
-    margin-left: 14%;
+    margin-left: 13%;
     margin-top: -0.3%;
 }
 li  {
@@ -92,6 +94,9 @@ li  {
 }
 section {
  padding: .2em 1em;
+}
+h3 {
+padding-left: 5% ;
 }
 section.content {
    margin-right: 12%;
@@ -103,6 +108,13 @@ section.content {
      position: absolute;
      top: 22%;
      margin-left: 10%;
+}
+.hangingindent {
+  padding-left: 22px ;
+}
+.contacttable {
+  font-size: 130%;
+  margin-left: 10%;
 }
 
 </style>
@@ -127,7 +139,7 @@ section.content {
             <li><a class="scroll" href="#contact">Contact</a></li>
              <!--<li><a class="scroll"  href=""><img src="iacs.jpg" height="50"></a></li> -->
           </ul>
-          <a class="scroll"  href="daslab.seas.harvard.edu" id="dest4"><img src="harvard_logo.png" height="30"></a>
+          <img id="dest4" src="harvard_logo.png" height="30">
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -138,13 +150,13 @@ section.content {
         <!--  <h1>Niv Dayan</h1> -->
         <h2> Niv Dayan </h2> 
         <p class="lead" style="font-size: 180%;">Postdoctoral Researcher<br> Harvard University</p>
-        <img style="margin-top:-0.5%" src="profile.jpg">
+        <img style="margin-top:-0.5%" src="profile.jpg" height="270">
       </div>
 
 <section id="destination1" class="content">
     
     <p class="ex">
-        I am a postdoctoral researcher at the Instutute for Applied Computational Sciences as well as the Data Systems Lab at Harvard University. My work is with Stratos Idreos and Pavlos Papa. My research interests are managing big data for scientific applications, especially astronomy. I am also interested in adaptive database indexing as well as flash memory. 
+        I am a postdoctoral researcher at the Data Systems Lab (<a href="http://daslab.seas.harvard.edu/" target="_blank">DASLab</a>) as well as the Instutute for Applied Computational Science  (<a href="http://iacs.seas.harvard.edu/" target="_blank">IACS</a>), both at Harvard University. I work with Stratos Idreos and Pavlos Protopapas on speeding up similarity searches within large data sets in astronomy. I am also interested in adaptive database indexing as well as flash memory. 
     </p>
 
 </section>
@@ -152,18 +164,29 @@ section.content {
 <section id="projects" class="content">
 <p></p>
     <h1>Projects</h1>
-    <h3 style="text-decoration: underline">Processing Big Scientific Data</h3>
+    <h3 style="text-decoration: underline">Similarity Search in Astronomical Data</h3>
     <p class="ex1">
+    The Large Synoptic Survey Telescope (LSST) will produce tens of terabytes of data every night when finished. How to organize this volume of data is an essential problem for astronomers 
+
+scientists much search for needles in haystacks. 
+
+This is a challenge for natural scientists, who need a way to answer questions about the data quickly so that they can focus on the science rather than data management. The role 
+
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
-    <h3 style="text-decoration: underline">Flash Memory</h3>
-    <p class="ex1">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
     </p>
     <h3 style="text-decoration: underline">Adaptive Indexing</h3>
     <p class="ex1">
-        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+The rising proportion of writes in application workloads has made write-optimized indexes such as LSM-trees resurge in popularity. An LSM-tree consists of multiple sorted substructures, each of which has to be probed during a lookup. To keep the performance of lookups scalable, substructures are periodically merged in the background. Furthermore, bloom filters in main memory allow lookups to skip some of the substructures. 
+</p>
+<p class="ex1">
+Thus, the cost of using an LSM-tree is measured along three dimensions: the work needed for merging substructures (<b>write-amplification</b>), the work needed for lookups (<b>read-amplification</b>), and the amount of main memory needed for the bloom filters (<b>space-amplification</b>). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best spot for a given application. 
     </p>
+    <h3 style="text-decoration: underline">Flash Memory</h3>
+    <p class="ex1">
+Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. 
+    </p>
+
+
 </section>
 
 <section id="publications" class="content">
@@ -182,9 +205,41 @@ section.content {
 
 <section id="contact" class="content">
     <h1>Contact</h1>
-    <p class="ex1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
+
+<table style="width:80%;" class="contacttable">
+<tr>
+  <td>
+    <dt>Email:</dt>
+  </td>
+  <td>
+    <dt>Post:</dt>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <dd class="hangingindent"><em>lastname</em>[AT]g.harvard.edu</dd>
+  </td>
+  <td>
+    <dd class="hangingindent"><strong>Niv Dayan</strong></dd>
+  </td>
+</tr>
+
+  <tr>
+    <td>
+                            
+    </td>
+    <td>
+                            <dd class="hangingindent">Harvard SEAS - DASlab<br>
+                            33 Oxford Street<br>
+                            136 Maxwell Dworkin<br>
+                            Cambridge, MA 02138</dd>
+   </td>		
+  </tr>
+</table>
+
+
+  
 </section>
 
     </div><!-- /.container -->
