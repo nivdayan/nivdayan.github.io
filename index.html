@@ -1,1 +1,201 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top - 53;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 1000,'swing');
+     });
+});//]]> 
+
+</script>
+
+<style>
+* {
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+p h1 h2 h3 {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+p.ex {
+    margin-top: -3%;
+    margin-bottom: 1%;
+    font-size: 150%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+p.ex1 {
+    margin-top: 0%;
+    margin-bottom: 1%;
+    font-size: 120%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+img {
+    margin: 0 0 10px 10px;
+}
+#dest4 {
+    position: absolute;
+    right: 0px;
+}
+#cont {
+    margin-right: 12%;
+    margin-left: 16%;
+    right: 0px;
+}
+#navbar {
+    position: absolute;
+    margin-left: 14%;
+    margin-top: -0.3%;
+}
+li  {
+ padding: .2em 1em;
+}
+section {
+ padding: .2em 1em;
+}
+section.content {
+   margin-right: 12%;
+   margin-left: 12%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container" id="cont">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:white;font-size: 160%;">Niv Dayan</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" style="font-size: 120%;">
+            <li><a class="scroll" href="#projects">Projects</a></li>
+            <li><a class="scroll" href="#publications">Publications</a></li>
+            <li><a class="scroll" href="#CV">CV</a></li>
+            <li><a class="scroll" href="#contact">Contact</a></li>
+            <!-- <li id="dest4"><a class="scroll"  href="daslab.seas.harvard.edu"><img src="logo.png" height="30"></a></li>
+            <li><a class="scroll"  href=""><img src="iacs.jpg" height="50"></a></li> -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top:-1.5%">
+
+      <div class="starter-template">
+        <!--  <h1>Niv Dayan</h1> -->
+        <h2> Niv Dayan </h2> 
+        <p class="lead" style="font-size: 180%;">Postdoctoral Researcher<br> Harvard University</p>
+        <img style="margin-top:-0.5%" src="profile.jpg">
+      </div>
+
+<section id="destination1" class="content">
+    
+    <p class="ex">
+        I am a postdoctoral researcher at the Instutute for Applied Computational Sciences as well as the Data Systems Lab at Harvard University. My work is with Stratos Idreos and Pavlos Papa. My research interests are managing big data for scientific applications, especially astronomy. I am also interested in adaptive database indexing as well as flash memory. 
+    </p>
+
+</section>
+
+<section id="projects" class="content">
+<p></p>
+    <h1>Projects</h1>
+    <h3 style="text-decoration: underline">Processing Big Scientific Data</h3>
+    <p class="ex1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <h3 style="text-decoration: underline">Flash Memory</h3>
+    <p class="ex1">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+    </p>
+    <h3 style="text-decoration: underline">Adaptive Indexing</h3>
+    <p class="ex1">
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    </p>
+</section>
+
+<section id="publications" class="content">
+    <h1>Publications</h1>
+    <p class="ex1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+</section>
+
+<section id="CV" class="content">
+    <h1>CV</h1>
+    <p class="ex1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+</section>
+
+<section id="contact" class="content">
+    <h1>Contact</h1>
+    <p class="ex1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+</section>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
