@@ -90,7 +90,7 @@ img {
     margin-top: -0.3%;
 }
 li  {
- padding: .3em 1em;
+ padding: .3em 2em;
 }
 section {
  padding: .2em 1em;
@@ -119,7 +119,7 @@ section.content {
 
 </style>
   </head>
-  <body>
+  <body id="body">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container" id="cont">
         <div class="navbar-header">
@@ -129,12 +129,12 @@ section.content {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:white;font-size: 160%;">Niv Dayan</a>
+          <a class="navbar-brand scroll" href="#body" style="color:white;font-size: 160%;">Niv Dayan</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav" style="font-size: 120%;">
             <li><a class="scroll" href="#projects">Projects</a></li>
-            <li><a class="scroll" href="#publications">Publications</a></li>
+            <!-- <li><a class="scroll" href="#publications">Publications</a></li> -->
             <li><a class="scroll" href="#CV">CV</a></li>
             <li><a class="scroll" href="#contact">Contact</a></li>
              <!--<li><a class="scroll"  href=""><img src="iacs.jpg" height="50"></a></li> -->
@@ -150,13 +150,16 @@ section.content {
         <!--  <h1>Niv Dayan</h1> -->
         <h2> Niv Dayan </h2> 
         <p class="lead" style="font-size: 180%;">Postdoctoral Researcher<br> Harvard University</p>
-        <img style="margin-top:-0.5%" src="profile.jpg" height="270">
+        <img style="margin-top:-0.5%" src="profile.jpg" height="260">
       </div>
 
 <section id="destination1" class="content">
     
     <p class="ex">
-        I am a postdoctoral researcher at the Data Systems Lab (<a href="http://daslab.seas.harvard.edu/" target="_blank">DASLab</a>) as well as the Instutute for Applied Computational Science  (<a href="http://iacs.seas.harvard.edu/" target="_blank">IACS</a>), both at Harvard University. I work with Stratos Idreos and Pavlos Protopapas on speeding up similarity searches within large data sets in astronomy. I am also interested in adaptive database indexing as well as flash memory. 
+        I am a postdoctoral researcher at the Data Systems Lab (<a href="http://daslab.seas.harvard.edu/" target="_blank">DASLab</a>) as well as the Instutute for Applied Computational Science  (<a href="http://iacs.seas.harvard.edu/" target="_blank">IACS</a>), both at Harvard University. My work is on developing <a class="scroll" href="#astronomy">data structures</a> for data sets in astronomy that enable a tractable exploration of the data. I am also interested in <a class="scroll" href="#indexing">adaptive database indexing</a> as well as <a class="scroll" href="#flash_mem">flash memory</a>. 
+
+<!-- I work with <a href="http://stratos.seas.harvard.edu/">Stratos Idreos</a> and <a href="http://iacs.seas.harvard.edu/people/pavlos-protopapas">Pavlos Protopapas</a> -->
+
     </p>
 
 </section>
@@ -164,24 +167,19 @@ section.content {
 <section id="projects" class="content">
 <p></p>
     <h1>Projects</h1>
-    <h3 style="text-decoration: underline">Similarity Search in Astronomical Data</h3>
-    <p class="ex1">
-    The Large Synoptic Survey Telescope (LSST) will produce tens of terabytes of data every night when finished. How to organize this volume of data is an essential problem for astronomers 
+    <h3 id="astronomy" style="text-decoration: underline;  ">Tractable Exploration of Astronomical Data </h3>  
+    <p class="ex1">  
+Our era’s scientific Wonders of the World such as the Large Synoptic Survey Telescope (LSST) will produce vast quantities of data. The manner in which this data is organised will determines the efficiency in which different kinds of queries can be processed. The problem is that a scientist does not necessarily know in advance which queries will run, because the next question about the data often depends on the results of a previous query. Thus, being able to answer a broad range of queries from an evolving scientific workload is crucial for scientific exploration to remain tractable. In this project, we develop data structures that enable a broader range of queries to be answered efficiently. 
 
-scientists much search for needles in haystacks. 
-
-This is a challenge for natural scientists, who need a way to answer questions about the data quickly so that they can focus on the science rather than data management. The role 
-
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
-    <h3 style="text-decoration: underline">Adaptive Indexing</h3>
+    <h3 id="indexing" style="text-decoration: underline">Adaptive Database Indexes</h3>
     <p class="ex1">
-The rising proportion of writes in application workloads has made write-optimized indexes such as LSM-trees resurge in popularity. An LSM-tree consists of multiple sorted substructures, each of which has to be probed during a lookup. To keep the performance of lookups scalable, substructures are periodically merged in the background. Furthermore, bloom filters in main memory allow lookups to skip some of the substructures. 
+The rising proportion of writes in application workloads has made write-optimized indexes such as LSM-trees resurge in popularity. <!--An LSM-tree consists of multiple sorted substructures, each of which has to be probed during a lookup. To keep the performance of lookups scalable, substructures are periodically merged in the background. Furthermore, bloom filters in main memory allow lookups to skip some of the substructures. 
 </p>
-<p class="ex1">
-Thus, the cost of using an LSM-tree is measured along three dimensions: the work needed for merging substructures (<b>write-amplification</b>), the work needed for lookups (<b>read-amplification</b>), and the amount of main memory needed for the bloom filters (<b>space-amplification</b>). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best spot for a given application. 
+<p class="ex1"> -->
+The cost of using an LSM-tree is measured along three dimensions: the work needed for merging substructures (<b>write-amplification</b>), the work needed for lookups (<b>read-amplification</b>), and the amount of main memory needed to support bloom filters (<b>space-amplification</b>). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best spot for a given application. 
     </p>
-    <h3 style="text-decoration: underline">Flash Memory</h3>
+    <h3 id="flash_mem" style="text-decoration: underline">Predictable Flash Memory Performance</h3>
     <p class="ex1">
 Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. 
     </p>
@@ -189,12 +187,12 @@ Although flash memory has risen as a popular secondary storage medium, its perfo
 
 </section>
 
-<section id="publications" class="content">
+<!-- <section id="publications" class="content">
     <h1>Publications</h1>
     <p class="ex1">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
-</section>
+</section> -->
 
 <section id="CV" class="content">
     <h1>CV</h1>
