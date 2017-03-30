@@ -143,12 +143,14 @@ section.content {
            <a class="navbar-brand scroll" href="#body" style="color:white;font-size: 160%;">Home </a> 
         </div> -->
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav" style="font-size: 120%;">
+          <ul class="nav navbar-nav" style="font-size: 110%;">
             <li><a class="scroll" href="#body">Home</a></li>
             <li><a class="scroll" href="#projects">Projects</a></li>
+	    <li><a class="scroll" href="#publications">Publications</a></li>
             <!-- <li><a class="scroll" href="#publications">Publications</a></li> -->
             <li><a class="scroll" href="#CV">CV</a></li>
             <li><a class="scroll" href="#contact">Contact</a></li>
+	    
              <!--<li><a class="scroll"  href=""><img src="iacs.jpg" height="50"></a></li> -->
           </ul>
           <img id="dest4" src="harvard_logo.png" height="30">
@@ -177,38 +179,63 @@ section.content {
 
    
 </section>
-<br>
+<!--<br>
 <section class="content">
 
-   <p class="ex">The slides from my recent workshop on NoSQL vs. NewSQL systems are <a href="nosql-newsql.pptx">here</a>, and the tutorial on MongoDB is <a href="mongo.pdf">here</a>. 
+    <p class="ex">The slides from my recent workshop on NoSQL vs. NewSQL systems are <a href="nosql-newsql.pptx">here</a>, and the tutorial on MongoDB is <a href="mongo.pdf">here</a>. 
     </p> 
-</section>
+</section>-->
 
 
 <section id="projects" class="content">
 <p></p>
     <h3>Projects</h3>
-<section id="astronomy">
-    <h4  class="project-titles" style=""><b>Tractable Exploration of Astronomical Data </b></h4>  
-    <p class="ex1">  
-Our era’s scientific Wonders of the World such as the Large Synoptic Survey Telescope (LSST) will produce vast quantities of data. The manner in which this data is organized will determine the efficiency in which different kinds of queries can be processed. The problem is that a scientist does not necessarily know in advance which queries will run, because the next question about the data often depends on the results of a previous query. Thus, being able to efficiently process a broad range of queries from an evolving scientific workload is crucial. In this project, we develop data structures that enable a broader range of queries to be answered efficiently so that scientific exploration can remain tractable. 
-    </p>
-</section>
+
 <section id="indexing1">
-    <h4 id="indexing" class="project-titles" style=""><b>Adaptive Database Indexes</b></h4>
+    <h4 id="indexing" class="project-titles" style=""><b>Self-Designing Key-Value Stores</b></h4>
     <p class="ex1">
 The rising proportion of writes in application workloads has made write-optimized indexes such as LSM-trees resurge in popularity. <!--An LSM-tree consists of multiple sorted substructures, each of which has to be probed during a lookup. To keep the performance of lookups scalable, substructures are periodically merged in the background. Furthermore, bloom filters in main memory allow lookups to skip some of the substructures. 
 </p>
 <p class="ex1"> -->
-The cost of such indexes is measured along three dimensions: the work needed to insert a key-value pair (write-amplification), the work needed for a lookup (read-amplification), and the amount of main memory and secondary storage needed to store the index (space-amplification). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best point for a given application. 
+The cost of such indexes is measured along three dimensions: the work needed to insert a key-value pair (write-amplification), the work needed for a lookup (read-amplification), and the amount of main memory and secondary storage needed to store the index (space-amplification). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best point for a given application. See <a class="scroll" href="#monkey">Monkey</a>.
     </p>
 </section>
 <section id="flash_mem">
     <h4 id="flash_mem" class="project-titles" style="text-decoration: none"><b>Predictable Flash Memory Performance</b></h4>
     <p class="ex1">
-Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. 
+Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. See <a class="scroll" href="#gecko">GeckoFTL</a>, <a class="scroll" href="#eagle">EagleTree</a>, and the <a class="scroll" href="#death">vision</a>. 
     </p>
 </section>
+<section id="astronomy">
+    <h4  class="project-titles" style=""><b>Tractable Big Data Exploration </b></h4>  
+    <p class="ex1">  
+Our era’s scientific Wonders of the World such as the Large Synoptic Survey Telescope (LSST) will produce vast quantities of data. The manner in which this data is organized will determine the efficiency in which different kinds of queries can be processed. The problem is that a scientist does not necessarily know in advance which queries will run, because the next question about the data often depends on the results of a previous query. Thus, being able to efficiently process a broad range of queries from an evolving scientific workload is crucial. In this project, we develop data structures that enable a broader range of queries to be answered efficiently so that scientific exploration can remain tractable. See <a class="scroll" href="#canopy">Data Canopy</a>.
+    </p>
+
+
+</section>
+</section>
+
+
+<section id="publications" class="content">
+
+    <h3>Selected Publications</h3>
+	<p class="ex1" id="monkey"> 
+	Monkey: Optimal Navigable Key-Value Store. Niv Dayan, Manos Athanassoulis, Stratos Idreos. <b>SIGMOD 2017</b>.
+	</p>
+	<p class="ex1" id="canopy"> 
+	Data Canopy: Accelerating Exploratory Statistical Analysis. Abdul Wasay, Xinding Wei, Niv Dayan, Stratos Idreos. <b>SIGMOD 2017</b>.
+	</p>
+	<p class="ex1" id="gecko"> 
+	GeckoFTL: Scalable Flash Translation Techniques for Very Large Flash Devices. Niv Dayan, Philippe Bonnet, Stratos Idreos. <b>SIGMOD 2016</b>.
+	</p>
+	<p class="ex1" id="eagle"> 
+	EagleTree: Exploring the Design Space of SSD-Based Algorithms. Niv Dayan, Martin Kjaer
+Svendsen, Matias Bjoerling, Philippe Bonnet, Luc Bouganim. <b>Demo@VLDB 2013</b>.
+	</p>
+	<p class="ex1" id="death"> 
+	The Necessary Death of the Block Device Interface. Matias Bjoerling, Philippe Bonnet, Luc Bouganim, Niv Dayan. <b>CIDR 2013</b>.
+	</p>
 
 </section>
 
@@ -236,10 +263,9 @@ Although flash memory has risen as a popular secondary storage medium, its perfo
   <td>
     <!--<em>[lastname]</em>@g.harvard.edu-->
     dayan@g.harvard.edu <br>
-    +1-857-472-0362
   </td>
   <td>
-    <strong>Niv Dayan</strong>
+    Niv Dayan
   </td>
 </tr>
 
