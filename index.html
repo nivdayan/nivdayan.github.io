@@ -172,9 +172,6 @@ section.content {
     
     <p class="ex">
         I am a postdoctoral researcher at the Data Systems Lab (<a href="http://daslab.seas.harvard.edu/" target="_blank">DASLab</a>) and at the Institute for Applied Computational Science  (<a href="http://iacs.seas.harvard.edu/" target="_blank">IACS</a>), both at Harvard University. I develop data structures for <a class="scroll" href="#indexing1">key-value stores</a>, <a class="scroll" href="#flash_mem">flash memory</a>, and <a class="scroll" href="#astronomy">data exploration</a>. 
-
-<!-- I work with <a href="http://stratos.seas.harvard.edu/">Stratos Idreos</a> and <a href="http://iacs.seas.harvard.edu/people/pavlos-protopapas">Pavlos Protopapas</a> -->
-
     </p>
 
    
@@ -196,7 +193,7 @@ The cost of such indexes is measured along three dimensions: the work needed to 
 <section id="flash_mem">
     <h4 id="flash_mem" class="project-titles" style="text-decoration: none"><b>Predictable Flash Memory Performance</b></h4>
     <p class="ex1">
-Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. See <a class="scroll" href="#gecko">GeckoFTL</a>, <a class="scroll" href="#eagle">EagleTree</a>, and the <a class="scroll" href="#death">vision</a>. 
+Although flash memory has risen as a popular secondary storage medium, its performance is difficult to predict. The reason is that internally, flash memory is subject to a complex set of constraints. Storage units must be erased before they are updated, erases have a bigger granularity than writes, and each storage unit has a limited lifetime in terms of erases. A flash translation layer (FTL) hides these constraints and exposes a simple block interface to the application. The problem is that the FTL's behind-the-scene work impacts performance. In this project, we redesign the FTL so as to eliminate bottlenecks and make the performance of flash devices predictable. See <a href="GeckoFTLPaper.pdf">GeckoFTL</a>, <a href="EagleTree.pdf">EagleTree</a>, and the <a href="NecessaryDeath.pdf">vision</a>. 
     </p>
 </section>
 <section id="astronomy">
@@ -214,20 +211,20 @@ Our era’s scientific Wonders of the World such as the Large Synoptic Survey Te
 
     <h3>Selected Publications</h3>
 	<p class="ex1" id="monkey"> 
-	Monkey: Optimal Navigable Key-Value Store. Niv Dayan, Manos Athanassoulis, Stratos Idreos. <b>SIGMOD 2017</b>.
+	Monkey: Optimal Navigable Key-Value Store. Niv Dayan, Manos Athanassoulis, Stratos Idreos. <b>SIGMOD 2017</b>. To appear. 
 	</p>
 	<p class="ex1" id="canopy"> 
-	Data Canopy: Accelerating Exploratory Statistical Analysis. Abdul Wasay, Xinding Wei, Niv Dayan, Stratos Idreos. <b>SIGMOD 2017</b>.
+	Data Canopy: Accelerating Exploratory Statistical Analysis. Abdul Wasay, Xinding Wei, Niv Dayan, Stratos Idreos. <b>SIGMOD 2017</b>. To appear. 
 	</p>
 	<p class="ex1" id="gecko"> 
-	GeckoFTL: Scalable Flash Translation Techniques for Very Large Flash Devices. Niv Dayan, Philippe Bonnet, Stratos Idreos. <b>SIGMOD 2016</b>.
+	<a href="GeckoFTLPaper.pdf">GeckoFTL: Scalable Flash Translation Techniques for Very Large Flash Devices.</a> Niv Dayan, Philippe Bonnet, Stratos Idreos. <b>SIGMOD 2016</b>.
 	</p>
 	<p class="ex1" id="eagle"> 
-	EagleTree: Exploring the Design Space of SSD-Based Algorithms. Niv Dayan, Martin Kjaer
+	<a href="EagleTree.pdf">EagleTree: Exploring the Design Space of SSD-Based Algorithms.</a> Niv Dayan, Martin Kjaer
 Svendsen, Matias Bjoerling, Philippe Bonnet, Luc Bouganim. <b>Demo@VLDB 2013</b>.
 	</p>
 	<p class="ex1" id="death"> 
-	The Necessary Death of the Block Device Interface. Matias Bjoerling, Philippe Bonnet, Luc Bouganim, Niv Dayan. <b>CIDR 2013</b>.
+	<a href="NecessaryDeath.pdf"> The Necessary Death of the Block Device Interface. </a> Matias Bjoerling, Philippe Bonnet, Luc Bouganim, Niv Dayan. <b>CIDR 2013</b>.
 	</p>
 
 </section>
