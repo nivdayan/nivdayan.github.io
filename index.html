@@ -187,7 +187,7 @@ section.content {
 The rising proportion of writes in application workloads has made write-optimized indexes such as LSM-trees resurge in popularity. <!--An LSM-tree consists of multiple sorted substructures, each of which has to be probed during a lookup. To keep the performance of lookups scalable, substructures are periodically merged in the background. Furthermore, bloom filters in main memory allow lookups to skip some of the substructures. 
 </p>
 <p class="ex1"> -->
-The cost of such indexes is measured along three dimensions: the work needed to insert a key-value pair (write-amplification), the work needed for a lookup (read-amplification), and the amount of main memory and secondary storage needed to store the index (space-amplification). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best point for a given application. See <a class="scroll" href="#monkey">Monkey</a>.
+The cost of such indexes is measured along three dimensions: the work needed to insert a key-value pair (write-amplification), the work needed for a lookup (read-amplification), and the amount of main memory and secondary storage needed to store the index (space-amplification). In this project, we identify the optimal trade-off curves among these cost metrics and show how to navigate them to find the best point for a given application. See <a class="scroll" href="monkeykeyvaluestore.pdf">Monkey</a>.
     </p>
 </section>
 <section id="flash_mem">
